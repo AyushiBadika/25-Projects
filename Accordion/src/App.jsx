@@ -1,17 +1,12 @@
-// import Accordion from "./Accordion/Accordion";
-// import ColorGenerator from "./ColorGenerator/ColorGenerator";
-// import StarRating from "./StarRating/StarRating";
-
 import "./App.css";
-import ImageSlider from "./Image Sider/ImageSlider";
-
+import { Link } from "react-router-dom";
 export default function App() {
   return (
-    <>
-      {/* <Accordion />
-      <ColorGenerator /> */}
-      {/* <StarRating noOfStars={8} /> */}
-      <ImageSlider url="https://picsum.photos/v2/list?page=1" limit="10" />
-    </>
+    <div className="flex flex-col p-10 ">
+      <Link to="/accordion">Accordion</Link>
+      <Link to="/color-generator"> Color Generator</Link>
+      <Link to="/star-rating"> Star Rating</Link>
+      <Link to="/image-slider"> Image Slider</Link>
+    </div>
   );
 }

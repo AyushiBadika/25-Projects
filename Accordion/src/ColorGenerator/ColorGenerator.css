@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-button {
+.cg-button {
   padding: 10px;
   margin-right: 20px;
   border-radius: 5px;
@@ -12,7 +12,8 @@ button {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.279);
   transition: all 2s ease;
   font-weight: bold;
+  background-color: #fff;
 }
-button:active {
+.cg-button:active {
   transform: scale(0.8);
 }

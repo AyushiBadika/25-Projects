@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./ColorGenerator.css";
 export default function ColorGenerator() {
   const [colorType, setColorType] = useState("hex");
   const [color, setColor] = useState("");
@@ -41,9 +42,14 @@ export default function ColorGenerator() {
       }}
     >
       <div>
-        <button onClick={() => setColorType("hex")}>Generate Hex Color</button>
-        <button onClick={() => setColorType("rgb")}>Gereate RGB Color</button>
+        <button className="cg-button" onClick={() => setColorType("hex")}>
+          Generate Hex Color
+        </button>
+        <button className="cg-button" onClick={() => setColorType("rgb")}>
+          Gereate RGB Color
+        </button>
         <button
+          className="cg-button"
           onClick={
             colorType === "hex"
               ? () => generateHexColor()
@@ -53,10 +59,12 @@ export default function ColorGenerator() {
           Generate Color
         </button>
       </div>
-      <h2 style={{ color: "white" }}>
+      <h2 style={{ color: "white" }} className="text-3xl font-bold">
         {colorType === "hex" ? "Hex Color :" : "RGB Color"}
       </h2>
-      <h1 style={{ color: "white" }}>{color}</h1>
+      <h1 style={{ color: "white" }} className="text-4xl font-bold">
+        {color}
+      </h1>
     </div>
   );
 }
